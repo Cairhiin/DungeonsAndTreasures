@@ -9,6 +9,7 @@ GameObject::GameObject(const char *textureSheet, int x = 0, int y = 0)
 }
 
 void GameObject::Update() {
+	// Test code - moves a player sprite diagonally across the screen
 	++xpos_;
 	++ypos_;
 
