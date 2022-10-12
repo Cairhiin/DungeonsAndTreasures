@@ -10,7 +10,7 @@ Game::Game(bool isRunning, SDL_Window *window)
 				: isRunning_(isRunning), window_(window), cnt_(0) {};
 
 void Game::init(const char* title, int xpos, int ypos, int width, int height, bool fullScreen) {
-	int flags = 0;
+	int flags{0};
 	if (fullScreen) {
 		flags = SDL_WINDOW_FULLSCREEN;
 	}

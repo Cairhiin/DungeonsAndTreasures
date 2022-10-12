@@ -1,9 +1,9 @@
 #include "Game.h"
 
-Game *game = nullptr;
+Game* game{ nullptr };
 
-const int FPS = 60;
-const int frameDelay = 1000 / FPS;
+const int FPS{ 60 };
+const int frameDelay{ 1000 / FPS };
 Uint32 frameStart;
 int frameTime;
 
