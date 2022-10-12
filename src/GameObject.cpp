@@ -3,8 +3,8 @@
 
 GameObject::GameObject(const char *textureSheet, int x = 0, int y = 0) 
 		:xpos_(x), ypos_(y) {
-	srcRect_ = { };
-	destinationRect_ = { };
+	srcRect_ = {};
+	destinationRect_ = {};
 	texture_ = TextureManager::LoadTexture(textureSheet);
 }
 

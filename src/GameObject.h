@@ -1,3 +1,15 @@
+/*
+* GAMEOBJECT.H
+*
+* GameObject class takes a texture or texture sheet 
+* as an old style C string, and an x and y of the 
+* location of the texture on the texture sheet
+* 
+* Each GameObject has its own render and update method
+* The class initializes an empty SDL_Rect source and destination
+* rectangle by default
+*/
+
 #pragma once
 #include "Game.h"
 

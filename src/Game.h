@@ -1,3 +1,16 @@
+/*
+* GAME.H
+* 
+* The Game class initializes the SDL graphics engine
+* and takes care of handling events, updaring, rendering,
+* and cleaning up after shutdown
+* It takes an old C string, an x and y position, a width
+* and height as ints, and a boolean to denote fullscreen
+* Shows the game window
+*/
+
+
+
 #pragma once
 #include <SDL.h>
 #include <SDL_image.h>

@@ -1,3 +1,10 @@
+/*
+* PLAYER.H
+* 
+* Player class extends the GameObject class
+* It needs fleshing out further in the future!
+*/
+
 #include "GameObject.h"
 
 class Player : public GameObject {
