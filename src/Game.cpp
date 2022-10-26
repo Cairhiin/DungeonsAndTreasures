@@ -1,8 +1,10 @@
 #include "Game.h"
 #include "TextureManager.h"
-#include "Player.h"
+#include "ECS/Components.h"
+#include "ECS/SpriteComponent.h"
 
-Player* player;
+Manager manager;
+auto& player(manager.AddEntity());
 
 SDL_Renderer* Game::renderer_{ nullptr };
 
@@ -33,7 +35,8 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 	}
 	else isRunning_ = false;
 
-	player = new Player("Cairhiin", "assets/knight.png", 0, 0);
+	player.AddComponent<PositionComponent>();
+	player.AddComponent<SpriteComponent>("assets/knight.png");
 }
 
 void Game::handleEvents() {
@@ -49,12 +52,15 @@ void Game::handleEvents() {
 }
 
 void Game::update() {
-	player->Update();
+	manager.refresh();
+	manager.update();
+	std::cout << player.GetComponent<PositionComponent>().x() << ", " <<
+		player.GetComponent<PositionComponent>().y() << std::endl;
 }
 
 void Game::render() {
 	SDL_RenderClear(renderer_);
-	player->Render();
+	manager.draw();
 	SDL_RenderPresent(renderer_);
 }
 
